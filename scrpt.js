@@ -4,6 +4,7 @@ function comparador() {
     let field1 = document.createElement('textarea')
     let field2 = document.createElement('textarea')
     let at = document.createAttribute('style')
+    
     at.value = 'margin:15px;'
     div.appendChild(field1)
     div.appendChild(field2)
