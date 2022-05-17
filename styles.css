@@ -49,17 +49,17 @@ footer {
 }
 
 .x {
-    height: 30px;
-    width: 30px;
     margin-bottom: 5px;
-    text-align: center;
-    transform:translateY(5px);
+    align-items: center;
+    line-height: 1px;
+    height: 30px;
     border-radius: 50%;
 }
 
 .btn-initial:hover {
     background: rgba(0, 0, 0, 0.767)
 }
+
 
 .input {
     position: relative;
@@ -103,7 +103,7 @@ footer {
     padding: 15px;
     border: 1px solid black;
     border-radius: 10px;
-    transition: all 0.2s ease-in;
+    transition: 0.2s ease-in;
 }
 .a {
     color: rgb(236, 117, 117);
@@ -112,5 +112,5 @@ footer {
 
 .hide {
     display: none;
-    transition: 1s;
+    transition: 1s ease-in-out;
 }
