@@ -19,7 +19,7 @@ section {
 }
 
 h1 {
-    font-size: 22px; 
+    font-size: 22px;
     border-bottom: 1px solid rgb(58, 33, 3);
 }
 
@@ -91,9 +91,9 @@ footer {
     border-bottom: 2px solid rgb(0, 0, 0);
 }
 
-.field-program:focus ~ label,
-.field-program:valid ~ label {
-    transform:translateY(-22px);
+.field-program:focus~label,
+.field-program:valid~label {
+    transform: translateY(-22px);
     font-size: 12px;
     color: black;
 }
@@ -105,6 +105,7 @@ footer {
     border-radius: 10px;
     transition: 0.2s ease-in;
 }
+
 .a {
     color: rgb(236, 117, 117);
     color: rgb(126, 255, 206)
