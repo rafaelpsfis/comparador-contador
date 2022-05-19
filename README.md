@@ -1,4 +1,4 @@
-# comparador-contador
+# ferramentas-documentos-fiscais
  Este programa tem o intuito de ser um facilitador nos processos internos de transportadoras. Para isso foram criadas três aplicações básicas:
 * Comparador de Caracteres
 * Contador de Caracteres
