@@ -1,6 +1,7 @@
 body {
     background: rgba(0, 0, 0, 0.836);
     font: normal 15pt Arial;
+    font-size: 15px;
 }
 
 header {
@@ -115,3 +116,4 @@ footer {
     display: none;
     transition: 1s ease-in-out;
 }
+

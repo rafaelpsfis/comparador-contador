@@ -79,25 +79,25 @@ function contar() {
 
 //===================== CHAVE NFE ===============================
 
-function chaveNfe() {
+function composicaoChave() {
     let div = document.getElementById('programa')
     div.classList.toggle("hide")
     div.innerHTML = `
         <div class="initializing-program">
-            <h1>Chave NF-e</h1>
+            <h1>Composição de Chaves (NFe/CTe/MDFe)</h1>
             <div class="input"> 
                 <input type="text" maxlength="70" class="field-program" id="item1" required>
                 <label>ITEM</label>
             </div>
     
-            <input type="button" value="Processar" class="btn-initial" onclick="decompoeNfe()">
+            <input type="button" value="Processar" class="btn-initial" onclick="decompoeChave()">
             <input type="button" value="X" class="btn-initial x" onclick="fechar()">
             <p id="resultado"> Resultado: </p>
         </div>
     `
 }
 
-function decompoeNfe() {
+function decompoeChave() {
     let resultado = document.querySelector("#resultado")
     if (item1.value == 0) {
         window.alert("ERRO: Insira a CHAVE do documento fiscal no campo 'ITEM' e clique em 'Processar'!!")
@@ -113,20 +113,49 @@ function decompoeNfe() {
         let codDoc = item1.value.substring(34, 43)
         let digVerif = item1.value.substring(43, 44)
 
-        resultado.innerHTML = `Código da UF do Emitente: ${codUf}`
-        resultado.innerHTML += ` AAMM de Emissão: ${anoMes}`
-        resultado.innerHTML += ` CNPJ do Emitente: ${cnpj}`
-        resultado.innerHTML += ` Modelo do documento: ${mod}`
-        resultado.innerHTML += ` Série do Documento: ${serie}`
-        resultado.innerHTML += ` Númerodo Documento: ${numDoc}`
-        resultado.innerHTML += ` Código Documento: ${codDoc}`
-        resultado.innerHTML += ` Dígito Verificador (DV): ${digVerif}`
+        resultado.innerHTML = `<p>Código da UF do Emitente: ${codUf} </p>`
+        resultado.innerHTML += `<p>AAMM de Emissão: ${anoMes}</p>`
+        resultado.innerHTML += `<p>CNPJ do Emitente: ${cnpj}</p>`
+        resultado.innerHTML += `<p>Modelo do documento: ${mod}</p>`
+        resultado.innerHTML += `<p>Série do Documento: ${serie}</p>`
+        resultado.innerHTML += `<p>Númerodo Documento: ${numDoc}</p>`
+        resultado.innerHTML += `<p>Código Documento: ${codDoc}</p>`
+        resultado.innerHTML += `<p>Dígito Verificador (DV): ${digVerif} </p>`
 
     }
 }
 
  // EXEMPLO NFE
  // 51080701212344000127550010000000981364112281
+/*  UF = cUF
+ AC = 12
+ AL = 27
+ AP = 16
+ AM = 13
+ BA = 29
+ CE = 23
+ DF = 53
+ GO = 52
+ ES = 32
+ MA = 21
+ MT = 51
+ MS = 50
+ MG = 31
+ PA = 15
+ PB = 25
+ PR = 41
+ PE = 26
+ PI = 22
+ RJ = 33
+ RN = 24
+ RS = 43
+ RO = 11
+ RR = 14
+ SC = 42
+ SP = 35
+ SE = 28
+ TO = 17 */
+
 
  /* links consulta :
  https://www.espiaonfe.com.br/lab/?i=como-montar-a-chave-de-acesso-do-ct-e
@@ -145,3 +174,4 @@ function decompoeNfe() {
 
  https://www.espiaonfe.com.br/lab/?i=como-montar-a-chave-de-acesso-do-ct-e#:~:text=A%20Chave%20de%20Acesso%20do%20Conhecimento%20de%20Transporte%20Eletr%C3%B4nico%20(CT,C%C3%B3digo%20Num%C3%A9rico%20e%20D%C3%ADgito%20Verificador.
  */
+
